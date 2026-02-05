@@ -40,8 +40,10 @@ function App() {
 }
 
 function AppWithRouter() {
+  // Required for GitHub Pages: app is served at /Onboarding/, not /
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   );

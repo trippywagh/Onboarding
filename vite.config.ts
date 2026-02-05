@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  // For GitHub Pages: use repo name as base (e.g. /Onboarding/). Use '/' for custom domain or username.github.io
-  base: process.env.VITE_BASE_URL || '/',
+  // GitHub Pages: /Onboarding/ for production build; / for local dev
+  base: process.env.VITE_BASE_URL ?? (process.env.NODE_ENV === 'production' ? '/Onboarding/' : '/'),
   plugins: [react()],
   resolve: {
     alias: { '@': path.resolve(__dirname, './src') },
