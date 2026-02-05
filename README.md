@@ -36,3 +36,9 @@ npm run build
 ```
 
 Output is in `dist/`.
+
+## GitHub Pages
+
+The repo uses a **GitHub Action** to build and deploy. The action runs on every push to `main` and deploys the built app to https://trippywagh.github.io/Onboarding/.
+
+**Required:** In the repo **Settings → Pages**, set **Source** to **“GitHub Actions”** (not “Deploy from a branch”). Then push to `main`; the first run may take 1–2 minutes.
