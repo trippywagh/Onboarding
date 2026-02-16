@@ -1,0 +1,395 @@
+/* Step 2 combined: board pills + choose track (2-step flow) */
+.step2-combined {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--space-8);
+}
+
+.step2-combined .step-progress__label {
+  color: var(--color-primary);
+  font-weight: var(--font-bold);
+}
+
+.step2-combined__content {
+  flex: 1;
+  padding: var(--space-4) var(--space-4) var(--space-6);
+}
+
+/* Choose your board */
+.step2-combined__board {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.step2-combined__board-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  padding: 0 var(--space-1);
+}
+
+.step2-combined__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.step2-combined__pill {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+}
+
+.step2-combined__pill--active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+/* Choose your track */
+.step2-combined__track-head {
+  text-align: left;
+  margin-bottom: var(--space-6);
+}
+
+.step2-combined__title {
+  margin: 0 0 var(--space-2);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-black);
+}
+
+.step2-combined__subtitle {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Cards */
+.step2-combined__cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.step2-combined__card {
+  position: relative;
+  text-align: left;
+  border: none;
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.step2-combined__card:active {
+  transform: scale(0.98);
+}
+
+/* NCERT card */
+.step2-combined__card--ncert {
+  width: 100%;
+}
+
+.step2-combined__ncert-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #4f46e5, #2563eb, #0ea5e9);
+}
+
+.step2-combined__ncert-blur {
+  position: absolute;
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+.step2-combined__ncert-blur--t {
+  top: 0;
+  right: 0;
+  width: 128px;
+  height: 128px;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(24px);
+  transform: translate(40px, -40px);
+}
+
+.step2-combined__ncert-blur--b {
+  bottom: 0;
+  left: 0;
+  width: 96px;
+  height: 96px;
+  background: rgba(49, 46, 129, 0.2);
+  filter: blur(16px);
+  transform: translate(-20px, 20px);
+}
+
+.step2-combined__ncert-inner {
+  position: relative;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.step2-combined__ncert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.step2-combined__ncert-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.step2-combined__ncert-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step2-combined__ncert-icon-wrap .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--color-white);
+  font-variation-settings: 'FILL' 1;
+}
+
+.step2-combined__ncert-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.step2-combined__ncert-name {
+  margin: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+
+.step2-combined__ncert-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: var(--font-bold);
+  color: rgba(224, 231, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.step2-combined__star {
+  font-size: 14px;
+  color: #fcd34d;
+  font-variation-settings: 'FILL' 1;
+}
+
+.step2-combined__radio {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step2-combined__radio-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-white);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.step2-combined__radio--on .step2-combined__radio-dot {
+  opacity: 1;
+}
+
+/* DECA block with bullets */
+.step2-combined__deca {
+  background: rgba(30, 27, 75, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+.step2-combined__deca-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.step2-combined__deca-icon {
+  font-size: 22px;
+  color: #7dd3fc;
+  font-variation-settings: 'FILL' 1;
+}
+
+.step2-combined__deca-title {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: 0.1em;
+}
+
+.step2-combined__deca-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: var(--space-3);
+}
+
+.step2-combined__deca-bullet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step2-combined__deca-bullet-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step2-combined__deca-bullet-icon .material-symbols-outlined {
+  font-size: 12px;
+  font-weight: 700;
+  color: #7dd3fc;
+}
+
+.step2-combined__deca-bullet-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.02em;
+}
+
+.step2-combined__deca-bullet-text--em {
+  font-size: 11px;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+.step2-combined__deca-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(129, 140, 248, 0.2);
+  margin-bottom: var(--space-3);
+}
+
+.step2-combined__deca-desc {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: rgba(238, 242, 255, 0.95);
+  line-height: 1.5;
+}
+
+/* Foundation card */
+.step2-combined__card--plain {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+}
+
+.step2-combined__card--plain.step2-combined__card--selected {
+  border-color: #93c5fd;
+  box-shadow: var(--shadow-md);
+}
+
+.step2-combined__plain-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.step2-combined__plain-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-border-light);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step2-combined__plain-icon .material-symbols-outlined {
+  font-size: 26px;
+  color: var(--color-text-light);
+}
+
+.step2-combined__plain-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.step2-combined__plain-title {
+  margin: 0 0 2px;
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+}
+
+.step2-combined__plain-desc {
+  margin: 0;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.step2-combined__radio--plain {
+  border-color: var(--color-border);
+}
+
+.step2-combined__radio--plain .step2-combined__radio-dot {
+  background: var(--color-primary);
+}
+
+.step2-combined__radio--plain.step2-combined__radio--on {
+  border-color: #93c5fd;
+}
+
+.step2-combined__footer {
+  padding: 0 var(--space-4);
+}
+
+.step2-combined__footer .btn {
+  font-size: var(--text-base);
+  letter-spacing: 0.02em;
+}

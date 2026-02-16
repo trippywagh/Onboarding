@@ -14,7 +14,7 @@ export function Step1Screen() {
 
   return (
     <div className="step1-screen">
-      <StepProgress step={1} total={3} onBack={() => navigate('/otp')} />
+      <StepProgress step={1} total={2} onBack={() => navigate('/otp')} />
 
       <div className="step1-screen__content">
         <div className="step1-screen__illustration">

@@ -6,7 +6,7 @@ const SCREENS = [
   { path: '/otp', label: 'OTP' },
   { path: '/step1', label: 'Step 1' },
   { path: '/step2', label: 'Step 2' },
-  { path: '/step3', label: 'Step 3' },
+  { path: '/step2-board', label: 'Board Only' },
   { path: '/ncert-home', label: 'NCERT Home' },
   { path: '/trial-ended', label: 'Trial Ended' },
   { path: '/subscription-plans', label: 'Subscription Plans' },

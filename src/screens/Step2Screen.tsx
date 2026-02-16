@@ -17,7 +17,7 @@ export function Step2Screen() {
 
   return (
     <div className="step2-screen">
-      <StepProgress step={2} total={3} onBack={() => navigate('/step1')} />
+      <StepProgress step={2} total={2} onBack={() => navigate('/step1')} />
 
       <div className="step2-screen__content">
         <div className="step2-screen__icon">
@@ -48,7 +48,7 @@ export function Step2Screen() {
       <div className="step2-screen__footer">
         <Button
           variant="primary"
-          onClick={() => navigate('/step3')}
+          onClick={() => navigate('/step2')}
           disabled={!board}
         >
           NEXT STEP
