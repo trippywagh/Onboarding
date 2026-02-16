@@ -107,25 +107,58 @@
 
 .step1-screen__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-3);
 }
 
 .step1-screen__class-btn {
-  padding: var(--space-4);
-  font-size: var(--text-base);
-  font-weight: var(--font-medium);
+  padding: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
   color: var(--color-text);
   background: var(--color-white);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: all 0.15s;
 }
 
 .step1-screen__class-btn--active {
-  background: var(--color-primary);
+  background: rgba(29, 78, 216, 0.05);
   border-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* Message shown after selecting a class */
+.step1-screen__message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-4);
+  background: #f0f7ff;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.step1-screen__message-icon {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-size: 24px;
+  color: #3b82f6;
+  flex-shrink: 0;
+}
+
+.step1-screen__message-text {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+}
+
+.step1-screen__message-highlight {
+  color: #3b82f6;
 }
 
 .step1-screen__footer {

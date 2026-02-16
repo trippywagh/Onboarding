@@ -125,7 +125,7 @@ export function Step2CombinedScreen() {
         <Button
           variant="primary"
           onClick={() => (track === 'ncert-deca' ? navigate('/ncert-home') : navigate('/'))}
-          disabled={!track}
+          disabled={!board || !track}
         >
           GET STARTED →
         </Button>

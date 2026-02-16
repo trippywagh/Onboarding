@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import './Step1Screen.css';
 
-const CLASSES = ['Class 9', 'Class 10', 'Class 11', 'Class 12'];
+const CLASSES = ['Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10', 'Class 11', 'Class 12', '12+'];
 
 export function Step1Screen() {
   const navigate = useNavigate();
@@ -56,10 +56,18 @@ export function Step1Screen() {
       </div>
 
       <div className="step1-screen__footer">
+        {targetClass && (
+          <div className="step1-screen__message">
+            <span className="material-symbols-outlined step1-screen__message-icon" aria-hidden="true">calendar_today</span>
+            <p className="step1-screen__message-text">
+              You will be in <span className="step1-screen__message-highlight">{targetClass}</span> starting in April 2026
+            </p>
+          </div>
+        )}
         <Button
           variant="primary"
           onClick={() => navigate('/step2')}
-          disabled={!targetClass}
+          disabled={!name.trim() || !targetClass}
         >
           Next
         </Button>
