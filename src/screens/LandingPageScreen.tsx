@@ -157,7 +157,7 @@ export function LandingPageScreen() {
               </div>
               <div className="landing-page__trial-row">
                 <span className="material-icons-round landing-page__trial-check" aria-hidden="true">check_circle</span>
-                <span>Full Experience</span>
+                <span>Full Experience(4 chapters)</span>
               </div>
             </div>
             <button
