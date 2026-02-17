@@ -7,11 +7,12 @@ import './Step2CombinedScreen.css';
 const BOARDS = ['CBSE', 'ICSE', 'STATE', 'OTHERS'] as const;
 type Track = 'ncert-deca' | 'foundation';
 
-const DECA_BULLETS = [
+type DecaBullet = { icon: string; label: string; italic?: boolean };
+const DECA_BULLETS: DecaBullet[] = [
   { icon: '3d_rotation', label: 'Immersive Learning' },
   { icon: 'psychology', label: 'AI Driven Paths' },
   { icon: 'check', label: 'REVOLUTIONARY METHOD', italic: true },
-] as const;
+];
 
 export function Step2CombinedScreen() {
   const navigate = useNavigate();
