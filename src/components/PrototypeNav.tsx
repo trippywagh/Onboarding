@@ -3,6 +3,7 @@ import './PrototypeNav.css';
 
 const SCREENS = [
   { path: '/', label: 'Login' },
+  { path: '/landing', label: 'Landing' },
   { path: '/otp', label: 'OTP' },
   { path: '/step1', label: 'Step 1' },
   { path: '/step2', label: 'Step 2' },

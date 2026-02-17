@@ -10,6 +10,7 @@ import { TrialEndedScreen } from '@/screens/TrialEndedScreen';
 import { SubscriptionPlansScreen } from '@/screens/SubscriptionPlansScreen';
 import { PaymentMethodScreen } from '@/screens/PaymentMethodScreen';
 import { SubscriptionSuccessScreen } from '@/screens/SubscriptionSuccessScreen';
+import { LandingPageScreen } from '@/screens/LandingPageScreen';
 import { PrototypeNav } from '@/components/PrototypeNav';
 import './styles/global.css';
 
@@ -22,6 +23,7 @@ function App() {
           <div className="app__screen">
             <Routes>
           <Route path="/" element={<LoginScreen />} />
+              <Route path="/landing" element={<LandingPageScreen />} />
           <Route path="/otp" element={<OTPScreen />} />
           <Route path="/step1" element={<Step1Screen />} />
               <Route path="/step2" element={<Step2CombinedScreen />} />
