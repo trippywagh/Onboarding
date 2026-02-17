@@ -194,11 +194,11 @@ export function LandingPageScreen() {
                 </li>
                 <li>
                   <span className="material-icons-round landing-page__plan-tick" aria-hidden="true">check</span>
-                  Unlimited Doubt Solving
+                  Quizzes and Tests
                 </li>
                 <li>
                   <span className="material-icons-round landing-page__plan-tick" aria-hidden="true">check</span>
-                  Personal Mentor
+                  Unlimtied Doubt Solving
                 </li>
               </ul>
               <button
